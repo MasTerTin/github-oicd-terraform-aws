@@ -109,8 +109,7 @@ jobs:
         run: terraform apply -auto-approve -input=false
 
       - name: Run Checkov for security checks
-        uses: bridgecrewio/checkov-action@v2
-        with:
+        uses: bridgecrewio/checkov-action@v1
           directory: ./  # Chỉ định thư mục chứa mã Terraform
         env:
           CHECKOV_OUTPUT: "json"
